@@ -8,7 +8,8 @@ export class RecipeService {
     recipeSelected =  new EventEmitter<Recipe>();
 
     private recipes: Recipe[] = [
-        new Recipe('A test Recipe', 'This is simply a test','https://get.pxhere.com/photo/dish-meal-food-produce-recipe-fish-breakfast-meat-pork-cuisine-steak-pork-chop-power-dishes-grilling-fried-food-604134.jpg',[new Ingredient('Meat',1), new Ingredient('French Fries',20)])
+        new Recipe('Test1', 'test1','https://images-gmi-pmc.edge-generalmills.com/a5e504b9-8e1c-480e-8456-dbc639bd928e.jpg',[new Ingredient('Meat',1), new Ingredient('French Fries',20)]),
+        new Recipe('Test2', 'test2','https://www.livingandloving.co.za/wp-content/uploads/2016/07/10-yummy-winter-warmer-recipes.jpg',[new Ingredient('Meat',2), new Ingredient('Eggs',20)])
       ];
 
       constructor(private slService: ShoppingListService) {}
