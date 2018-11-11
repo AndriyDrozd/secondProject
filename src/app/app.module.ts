@@ -22,6 +22,7 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { AuthService } from './auth/auth.service';
 import { AuthGuard } from './auth/auth-guard.service';
+import { RecipesModule } from './recipes/recipes.module';
 
 
 
@@ -29,15 +30,9 @@ import { AuthGuard } from './auth/auth-guard.service';
   declarations: [
     AppComponent,
     HeaderComponent,
-    RecipesComponent,
-    RecipeListComponent,
-    RecipeDetailComponent,
-    RecipeItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
     DropdownDirective,
-    RecipeStartComponent,
-    RecipeEditComponent,
     SignupComponent,
     SigninComponent
   ],
@@ -45,8 +40,8 @@ import { AuthGuard } from './auth/auth-guard.service';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule,
-    HttpModule
+    HttpModule,
+    RecipesModule
   ],
   providers: [ShoppingListService, RecipeService, DataStorageService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
