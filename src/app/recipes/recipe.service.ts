@@ -1,10 +1,10 @@
 import { Recipe } from "./recipe.model";
-import { EventEmitter, Injectable } from "@angular/core";
+
 import { Ingredient } from "../shared/ingredient.model";
-import { ShoppingListService } from "../shopping-list/shopping-list.service";
 import { Subject } from "rxjs";
 
-@Injectable()
+
+
 export class RecipeService {
     recipesChanged = new Subject<Recipe[]>();
 
@@ -13,7 +13,7 @@ export class RecipeService {
         new Recipe('Test2', 'test2','https://www.livingandloving.co.za/wp-content/uploads/2016/07/10-yummy-winter-warmer-recipes.jpg',[new Ingredient('Meat',2), new Ingredient('Eggs',20)])
       ];
 
-      constructor(private slService: ShoppingListService) {}
+      constructor() {}
 
       setRecipes(recipes: Recipe[]) {
           this.recipes = recipes;
@@ -28,9 +28,7 @@ export class RecipeService {
           return this.recipes[index];
       }
 
-      addIngredientsToShoppingList(ingredients: Ingredient[]) {
-        this.slService.addIngredients(ingredients);
-      }
+      
 
       addRecipe(recipe: Recipe) {
         this.recipes.push(recipe);
